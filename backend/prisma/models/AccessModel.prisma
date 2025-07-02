@@ -1,0 +1,12 @@
+model AccessModel {
+    id       Int @id @default(autoincrement())
+    userId   Int
+    moduleId Int
+
+    user   UserModel   @relation(fields: [userId], references: [id])
+    module ModuleModel @relation(fields: [moduleId], references: [id])
+
+    @@unique([userId, moduleId])
+    @@index([userId])
+    @@index([moduleId])
+}

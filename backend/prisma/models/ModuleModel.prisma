@@ -1,0 +1,10 @@
+model ModuleModel {
+    id        Int      @id @default(autoincrement())
+    name      String   @unique
+    slug      String   @unique
+    icon      String?
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    access AccessModel[]
+}
