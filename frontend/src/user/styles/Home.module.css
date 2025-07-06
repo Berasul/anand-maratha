@@ -1,3 +1,13 @@
+/* ------------------------------------------------------------------------------------------ */
+/* HERO START */
+/* ------------------------------------------------------------------------------------------ */
+
+
+
+section#banner {
+    display: block;
+}
+
 .mobile-banner {
     display: none;
 }
@@ -10,26 +20,81 @@
     position: relative;
 }
 
-.banner_image {
-    max-height: 100vh;
-    height: auto;
+.banner_slider {
+    position: relative;
+}
+
+.banner_slide {
+    position: relative;
+    height: 90vh;
+    /* max-height: 610px; */
+}
+
+.banner_slide img {
+    height: 100%;
+    width: 100%;
+}
+
+.banner_content {
+    position: absolute;
     display: flex;
-    justify-content: center;
-    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 100px 0px 25px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.7s all ease-out;
+    transition-delay: 0.5s;
+}
+
+.banner_content.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.banner_content * {
+    color: #FFF !important;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.banner_content h2 {
+    color: #fff !important;
+    font-size: 80px !important;
+    text-shadow: 4px 1px 2px #000 !important;
+    font-weight: 500 !important;
+    font-family: roboto !important;
+    letter-spacing: .1em;
+    line-height: 40px;
+    margin-bottom: 60px;
+}
+
+.banner_content h4 {
+    font-size: 35px !important;
+    text-shadow: 4px 1px 2px #000 !important;
+}
+
+.banner_content p {
+    font-size: 22px !important;
+    text-shadow: 4px 1px 2px #000 !important;
+    margin-bottom: 5px;
+}
+
+.banner_image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 .banner_image img {
     object-fit: cover;
     object-position: top;
 }
-
-.banner_image video {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-}
-
 
 .custom-banner-next,
 .custom-banner-prev {
@@ -64,9 +129,6 @@
 }
 
 
-/* ------------------------------------------------------------------------------------------ */
-/* BANNER RESPONSIVE CSS */
-/* ------------------------------------------------------------------------------------------ */
 @media(min-width:1799px) {
     .banner_image {
         height: auto;
@@ -91,3 +153,251 @@
         display: block;
     }
 }
+
+/* ------------------------------------------------------------------------------------------ */
+/* HERO END */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* SERVICES START */
+/* ------------------------------------------------------------------------------------------ */
+
+.services_desc p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.marriage_card_outer {
+    background: #FFF;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.services_light .marriage_card_outer {
+    background: #f9f9f9c5;
+}
+
+.marriage_card_outer:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.marriage_card {
+    background: url('/images/user/home/services/marraige_card_bg.png') no-repeat;
+    background-size: 100% 100%;
+    background-position: top;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px 10px;
+}
+
+
+.marriage_card h3 {
+    position: relative;
+    margin-bottom: 50px;
+    transition: all .5s ease 0s;
+}
+
+.marriage_card h3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: var(--red);
+    bottom: -20px;
+    left: 0;
+}
+
+.marriage_card h3 a {
+    font-size: 40px;
+    font-weight: 700 !important;
+    font-family: alex !important;
+    color: #382d44;
+    text-decoration: none;
+    transition: all .5s ease 0s;
+}
+
+.marriage_card p {
+    text-align: center;
+}
+
+.read_more {
+    display: block;
+    padding: 10px 30px;
+    border: 1px solid;
+    border-radius: 40px;
+    color: #646464;
+    transition: all .5s ease 0s;
+}
+
+.read_more:hover {
+    background: var(--red);
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* SERVICES END */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* ABOUT US START */
+/* ------------------------------------------------------------------------------------------ */
+
+.about_us_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all ease-in-out;
+}
+
+.about_us_image:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+}
+
+.about_us_image img {
+    transform: skewX(-8deg);
+}
+
+.bar_group {
+    position: relative;
+}
+
+.b_tooltip_tri,
+.bar_group__bar::before {
+    content: '';
+    display: block;
+}
+
+.bar_group__bar {
+    width: 0;
+    height: 10px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    background: #85d4de;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+    -moz-transition: width 1s;
+    margin-bottom: 2em !important;
+}
+
+.bar_group__bar::before {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 10px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    background: #E4E4E4;
+}
+
+.b_tooltip {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    position: relative;
+    float: left;
+    left: 100%;
+    padding: 4px 10px 7px;
+    background-color: #00BCD4;
+    -webkit-transform: translateX(-50%) translateY(-30px);
+    -ms-transform: translateX(-50%) translateY(-30px);
+    transform: translateX(-50%) translateY(-30px);
+    -moz-transform: translateX(-50%) translateY(-30px);
+    -o-transform: translateX(-50%) translateY(-30px);
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    line-height: 11px;
+    width: 51px;
+    text-align: center;
+}
+
+.b_tooltip span {
+    color: #fff;
+    font-size: .8em;
+}
+
+.b_tooltip_tri {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    border-color: #00BCD4 transparent transparent;
+}
+
+p.b_label a {
+    margin-bottom: .5em;
+    font-size: 1.1em;
+    color: var(--red);
+}
+
+.bar_label_max,
+.bar_label_min {
+    font-size: .8em;
+    position: absolute;
+}
+
+.bar_label_max {
+    right: 0;
+    margin-top: 1em;
+}
+
+.bar_label_min {
+    left: 0;
+    margin-top: 1em;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ABOUT US END */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* PROFILES START */
+/* ------------------------------------------------------------------------------------------ */
+
+.profiles {
+    background: url('/images/user/home/profiles/bg.png') no-repeat;
+}
+
+.profile_slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_slide * {
+    color: #fff;
+    text-align: center;
+}
+
+.profile_slide img {
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+}
+
+.profile_slide h6 {
+    margin-bottom: 1rem;
+}
+
+.profile_slide p {
+    margin-bottom: 0.1rem;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* PROFILES END */
+/* ------------------------------------------------------------------------------------------ */

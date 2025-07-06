@@ -1,0 +1,86 @@
+html {
+    overflow-x: hidden;
+}
+
+html body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    color: #646464;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../src/user/assets/fonts/roboto/Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../src/user/assets/fonts/roboto/Medium.ttf');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../src/user/assets/fonts/roboto/SemiBold.ttf');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../src/user/assets/fonts/roboto/Bold.ttf');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: alex;
+    src: url('../src/user/assets/fonts/alexBrush/Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+body #user_layout p,
+body #user_layout a,
+body #user_layout li,
+body #user_layout span,
+body #user_layout div,
+body #user_layout button {
+    font-family: roboto;
+    font-weight: 400;
+}
+
+body #user_layout h1,
+body #user_layout h2,
+body #user_layout h3 {
+    font-family: alex;
+    font-weight: 400;
+}
+
+body a {
+    text-decoration: none;
+
+}
+
+body .swiper-button-next,
+body .swiper-button-prev {
+    color: white;
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    top: 50%;
+    margin: 10px;
+    transform: translateY(-50%);
+}
+
+body .swiper-button-next::after,
+body .swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--red);
+}

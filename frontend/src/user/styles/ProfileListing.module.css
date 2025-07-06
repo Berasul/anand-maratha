@@ -1,0 +1,48 @@
+body p.headPara {
+    font-size: 16px;
+    text-align: justify;
+    color: #000;
+}
+
+.headPara a {
+    color: var(--red);
+}
+
+.profile_listing table thead th {
+    background-color: #8c0404;
+    font-weight: 300;
+    text-align: left;
+    color: #fff;
+    padding: 12px 0;
+}
+
+.even_row td {
+    background-color: #f7eded !important;
+}
+
+.profile_listing table tbody tr td {
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-family: roboto;
+    border-bottom: 0px;
+    padding: 15px 0px;
+}
+
+.profile_listing table img {
+    height: 115px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #000;
+}
+
+.table_img {
+    color: var(--red);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 100%;
+    gap: 5px;
+}
