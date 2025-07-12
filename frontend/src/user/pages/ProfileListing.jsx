@@ -8,7 +8,7 @@ const ProfileListing = () => {
         <>
             <PageHeader
                 title="Unmarried Grooms"
-                backgroundImage="https://www.anandmaratha.com/wp-content/uploads/2017/05/banner-2.png"
+                backgroundImage="/images/user/page-banner/listing.webp"
             />
             <div className={`${styles.profile_listing} ${generalStyles.side_space} ${generalStyles.vertical_space}`}>
                 <div className="container">

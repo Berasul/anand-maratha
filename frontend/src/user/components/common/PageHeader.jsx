@@ -2,9 +2,7 @@ import styles from '../../styles/UserGeneral.module.css';
 
 const PageHeader = ({ title, backgroundImage }) => {
     const sectionStyle = {
-        background: `url(${backgroundImage}) no-repeat`,
-        backgroundSize: '100% 100%',
-        maxWidth: '100%',
+        background: `url(${backgroundImage}) no-repeat center/cover`,
     };
 
     return (

@@ -49,7 +49,10 @@
 .page_header_area {
     text-align: center;
     text-transform: uppercase;
-    padding: 120px 0;
+    height: 335px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .page_header_area h1 {
