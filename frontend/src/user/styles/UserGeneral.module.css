@@ -12,13 +12,57 @@
     padding-bottom: 100px;
 }
 
+.header_end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.header_end .page_btn {
+    flex: 1;
+}
+
 .page_btn {
-    color: #fff !important;
-    padding: 8px;
+    padding: 5px 15px;
+    color: #fff;
     background: var(--red);
+    border: 1px solid transparent;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: 0.3s all ease;
+}
+
+.page_btn:hover {
+    color: var(--red);
+    background: transparent;
+    border-color: var(--red);
+}
+
+.page_btn:hover svg g path {
+    stroke: var(--red);
+}
+
+.page_btn_2 {
+    background: transparent;
+    border-color: var(--red);
+    color: var(--red);
+}
+
+
+.page_btn_2:hover {
+    color: #fff;
+    background: var(--red);
+    border-color: transparent;
+}
+
+.page_btn_2:hover svg g path {
+    stroke: #fff;
 }
 
 .dark_bg {
@@ -47,9 +91,10 @@
 }
 
 .page_header_area {
+    position: relative;
+    overflow: hidden;
     text-align: center;
-    text-transform: uppercase;
-    height: 335px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,10 +102,35 @@
 
 .page_header_area h1 {
     color: #382d44;
-    font-size: 60px;
+    font-size: 100px;
     font-weight: 700;
     text-shadow: 4px 1px 2px #000;
-    font-family: roboto !important;
+    text-transform: capitalize;
+    font-family: allura !important;
+    position: relative;
+    z-index: 1;
+}
+
+.page_header_background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: zoomInOut 10s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .scrollTopBtn {
@@ -93,8 +163,12 @@
     align-items: center;
 }
 
-.pagination a{
+.pagination a {
     color: var(--red);
+}
+
+.main_wrapper {
+    margin-top: 90px;
 }
 
 /* -----------------------------------
@@ -102,11 +176,21 @@ HEADER - START
 ----------------------------------- */
 
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #FFF;
+    width: 100vw;
+    height: auto;
+    box-shadow: 0 0 10px #1a1a1a50;
 }
 
 .header_link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5px;
     color: #111111;
     letter-spacing: 0;
     padding: 0px 11px 0px 7px;

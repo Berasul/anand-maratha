@@ -28,7 +28,7 @@ const UserLayout = () => {
     return (
         <div id="user_layout" className={`${styles.wrapper}`}>
             <Header />
-            <main>
+            <main className={`${styles.main_wrapper}`}>
                 <Outlet />
             </main>
             <Footer />

@@ -1,20 +1,11 @@
 import { Link } from 'react-router-dom';
-import Refresh from '../assets/icons/Refresh';
+import { LoginIcon, RegisterIcon } from '../assets/icons';
 import styles from '../styles/UserGeneral.module.css';
 
 const Header = () => {
     const menuItems = [
         { name: "Home", to: "/" },
         { name: "Rules", to: "/rules" },
-        { name: "Enroll", to: "/enroll" },
-        {
-            name: "Search",
-            dropdown: true,
-            items: [
-                { name: "Matching Search", to: "/search/matching" },
-                { name: "Single ID Search", to: "/search/single-id" },
-            ],
-        },
         {
             name: "Profile",
             dropdown: true,
@@ -26,7 +17,6 @@ const Header = () => {
             ],
         },
         { name: "Horoscope", to: "/horoscope" },
-        { name: "Renew", to: "/renew" },
         { name: "Success Stories", to: "/success-stories" },
         { name: "Contact Us", to: "/contact" },
     ];
@@ -36,7 +26,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                        <img src="/images/logo.png" alt="Logo" height="87" />
+                        <img src="/images/logo.png" alt="Logo" height="65" />
                     </Link>
 
                     <button
@@ -56,16 +46,16 @@ const Header = () => {
                             {menuItems.map((item, idx) =>
                                 item.dropdown ? (
                                     <li className="nav-item dropdown" key={idx}>
-                                        <a
-                                            className={`${styles.header_link} nav-link dropdown-toggle`}
+                                        <Link
+                                            className={`${styles.header_link} nav-link dropdown-toggle position-relative`}
                                             href="#"
                                             id={`dropdown-${idx}`}
                                             role="button"
                                             data-bs-toggle="dropdown"
                                             aria-expanded="false"
                                         >
-                                            {item.name}
-                                        </a>
+                                            {item.name}<span className={`ms-1 dropdown-arrow`} />
+                                        </Link>
                                         <ul className="dropdown-menu" aria-labelledby={`dropdown-${idx}`}>
                                             {item.items.map((subItem, subIdx) => (
                                                 <li key={subIdx}>
@@ -87,12 +77,12 @@ const Header = () => {
                         </ul>
                     </div>
 
-                    <div className="header_end">
-                        <Link to="/login" className={`${styles.page_btn} me-2`}>
-                            Profile Login
+                    <div className={`${styles.header_end}`}>
+                        <Link to="/login" className={`${styles.page_btn}`}>
+                            Login <LoginIcon />
                         </Link>
-                        <Link to="/register">
-                            <Refresh />
+                        <Link to="/register" className={`${styles.page_btn} ${styles.page_btn_2}`}>
+                            Register <RegisterIcon />
                         </Link>
                     </div>
 

@@ -6,7 +6,8 @@ const PageHeader = ({ title, backgroundImage }) => {
     };
 
     return (
-        <div className={`${styles.page_header_area}`} style={sectionStyle}>
+        <div className={`${styles.page_header_area}`}>
+            <div className={styles.page_header_background} style={sectionStyle}></div>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">

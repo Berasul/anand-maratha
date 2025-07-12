@@ -44,6 +44,34 @@ html body {
     font-display: swap;
 }
 
+@font-face {
+    font-family: vibes;
+    src: url('../src/user/assets/fonts/greatVibes/Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: awesome;
+    src: url('../src/user/assets/fonts/awesome/Regular.otf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: parisienne;
+    src: url('../src/user/assets/fonts/parisienne/Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: allura;
+    src: url('../src/user/assets/fonts/allura/Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
 body #user_layout p,
 body #user_layout a,
 body #user_layout li,
@@ -83,4 +111,74 @@ body .swiper-button-prev::after {
     font-size: 18px;
     font-weight: bold;
     color: var(--red);
+}
+
+
+/* Make dropdown open on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    background: #f9f9f9;
+    transform: translateY(0);
+}
+
+
+/* Improve dropdown animation */
+.dropdown-menu {
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 10px 0 0;
+    min-width: 220px;
+    display: flex !important;
+    flex-direction: column;
+}
+
+/* Style for dropdown items */
+.dropdown-item {
+    font-size: 15px;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li:last-child .dropdown-item {
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--red);
+    color: #fff;
+}
+
+/* Optional: add subtle shadow to header on hover */
+.navbar-nav .nav-item.dropdown:hover>.nav-link {
+    color: var(--red);
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+    /* Hide Bootstrap default arrow */
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: solid #111;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    margin-left: 4px;
+    margin-bottom: 2px;
+}
+
+.nav-item.dropdown:hover .dropdown-arrow {
+    transform: rotate(-135deg);
 }
