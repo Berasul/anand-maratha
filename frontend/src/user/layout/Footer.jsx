@@ -53,9 +53,9 @@ const Footer = () => {
                                     className="footer-logo"
                                 >
                                     <img
-                                        src="https://www.anandmaratha.com/wp-content/themes/weddingreval/img/footer/footer-logo.png"
+                                        src="/images/logo_white.png"
                                         alt="Wedding-Reval"
-                                        style={{ width: '82%', marginTop: '10px', marginBottom: '10px' }}
+                                        style={{ width: '60%', marginTop: '10px', marginBottom: '10px' }}
                                     />
                                 </a>
                                 <div className="center">
